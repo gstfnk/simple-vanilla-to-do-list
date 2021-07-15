@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ULTIMATE TODO LIST</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
+          integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+</head>
+<body>
+<form id="welcomeForm" class="pure-form" style="width: 40%; margin: 0 auto;">
+    <input type="text" name="name" class="pure-input-rounded" placeholder="name"/>
+    <label class="pure-radio">
+        <input type="radio" name="lang" value="1" checked=""/>
+        🇺🇸
+    </label>
+    <label class="pure-radio">
+        <input type="radio" name="lang" value="2"/>
+        🇵🇱
+    </label>
+    <button id="btn" type="submit" class="pure-button pure-button-primary">Submit</button>
+</form>
+<div id="welcome" style="width: 40%; margin: 0 auto;">
+
+</div>
+<script>
+    const welcomeDiv = document.getElementById('welcome');
+    const form = document.getElementById('welcomeForm');
+    const submitButton = document.getElementById('btn');
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        const formObj = {
+            name: form.elements.name.value,
+            lang: form.elements.lang.value
+        };
+        fetch('http://localhost:8080/api?' + new URLSearchParams(formObj))
+            .then((response) => {
+                return response.text();
+            }).then((text) => {
+            welcomeDiv.innerHTML = `
+                <h1>${text}</h1>
+            `;
+        });
+    });
+</script>
+</body>
+</html>
