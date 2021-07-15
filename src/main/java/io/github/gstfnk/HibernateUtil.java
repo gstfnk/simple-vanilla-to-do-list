@@ -1,4 +1,4 @@
-package ultimateToDoList;
+package io.github.gstfnk;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;

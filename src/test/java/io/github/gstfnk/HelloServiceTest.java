@@ -1,4 +1,4 @@
-package ultimateToDoList;
+package io.github.gstfnk;
 
 import static org.junit.Assert.assertEquals;
 

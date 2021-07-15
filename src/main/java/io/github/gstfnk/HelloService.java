@@ -1,4 +1,4 @@
-package ultimateToDoList;
+package io.github.gstfnk;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

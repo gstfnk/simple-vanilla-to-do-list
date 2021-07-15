@@ -84,7 +84,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ultimateToDoList.App</mainClass>
+                            <mainClass>io.github.gstfnk.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
