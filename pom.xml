@@ -14,7 +14,9 @@
         <java.version>11</java.version>
         <junit.version>4.12</junit.version>
         <slf4j.version>1.7.25</slf4j.version>
-        <jetty.version>9.4.42.v20210604</jetty.version>
+        <jetty.version>9.4.14.v20181114</jetty.version>
+        <jackson.version>2.12.4</jackson.version>
+        <org.hibernate.version>5.5.3.Final</org.hibernate.version>
     </properties>
 
     <dependencies>
@@ -52,6 +54,12 @@
             <artifactId>jetty-annotations</artifactId>
             <version>${jetty.version}</version>
         </dependency>
+        <!-- json -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
         <!-- db -->
         <dependency>
             <groupId>com.h2database</groupId>
@@ -61,7 +69,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>5.5.3.Final</version>
+            <version>${org.hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
