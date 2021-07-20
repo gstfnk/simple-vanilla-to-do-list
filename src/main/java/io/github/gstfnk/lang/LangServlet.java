@@ -1,4 +1,4 @@
-package io.github.gstfnk;
+package io.github.gstfnk.lang;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.LoggerFactory;

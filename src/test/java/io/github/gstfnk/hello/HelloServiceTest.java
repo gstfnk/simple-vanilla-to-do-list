@@ -1,7 +1,9 @@
-package io.github.gstfnk;
+package io.github.gstfnk.hello;
 
 import static org.junit.Assert.assertEquals;
 
+import io.github.gstfnk.lang.Lang;
+import io.github.gstfnk.lang.LangRepository;
 import org.junit.Test;
 
 import java.util.Optional;
@@ -57,7 +59,7 @@ public class HelloServiceTest {
     private LangRepository alwaysReturningEmptyRepository() {
         return new LangRepository() {
             @Override
-            Optional<Lang> findById(Integer id) {
+            public Optional<Lang> findById(Integer id) {
                 return Optional.empty();
             }
         };
@@ -77,7 +79,7 @@ public class HelloServiceTest {
     private LangRepository fallbackLandIgRepository() {
         return new LangRepository() {
             @Override
-            Optional<Lang> findById(Integer id) {
+            public Optional<Lang> findById(Integer id) {
                 if (id.equals(HelloService.FALLBACK_LANG.getId())) {
                     return Optional.of(new Lang(null, FALLBACK_ID_WELCOME, null));
                 }
@@ -89,7 +91,7 @@ public class HelloServiceTest {
     private LangRepository alwaysReturningHelloRepository() {
         return new LangRepository() {
             @Override
-            Optional<Lang> findById(Integer id) {
+            public Optional<Lang> findById(Integer id) {
                 return Optional.of(new Lang(null, WELCOME, null));
             }
         };

@@ -1,4 +1,4 @@
-package io.github.gstfnk;
+package io.github.gstfnk.hello;
 
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;

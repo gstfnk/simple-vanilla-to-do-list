@@ -1,5 +1,7 @@
-package io.github.gstfnk;
+package io.github.gstfnk.hello;
 
+import io.github.gstfnk.lang.Lang;
+import io.github.gstfnk.lang.LangRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
