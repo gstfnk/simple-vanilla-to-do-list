@@ -24,7 +24,7 @@ public class Lang {
     }
 
     // Hibernate (JPA) needs it
-    Lang() {
+    public Lang() {
     }
 
     public Integer getId() {

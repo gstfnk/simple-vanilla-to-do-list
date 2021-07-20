@@ -15,7 +15,7 @@ import java.io.IOException;
 public class LangServlet extends HttpServlet {
     private final Logger logger = LoggerFactory.getLogger(LangServlet.class);
 
-    private LangRepository repository;
+    private LangService service;
     private ObjectMapper mapper;
 
     /**
@@ -23,18 +23,18 @@ public class LangServlet extends HttpServlet {
      */
     @SuppressWarnings("unused")
     public LangServlet() {
-        this(new LangRepository(), new ObjectMapper());
+        this(new LangService(), new ObjectMapper());
     }
 
-    LangServlet(LangRepository repository, ObjectMapper mapper) {
-        this.repository = repository;
+    LangServlet(LangService service, ObjectMapper mapper) {
+        this.service = service;
         this.mapper = mapper;
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.info("Request from 2nd exercise with parameter " + req.getParameterMap());
+        logger.info("Request with parameter " + req.getParameterMap());
         resp.setContentType("application/json;charset=UTF-8");
-        mapper.writeValue(resp.getOutputStream(), repository.findAll());
+        mapper.writeValue(resp.getOutputStream(), service.findAll());
     }
 }
