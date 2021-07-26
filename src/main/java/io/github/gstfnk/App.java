@@ -9,9 +9,6 @@ import org.eclipse.jetty.util.component.LifeCycle;
 import org.eclipse.jetty.webapp.*;
 
 
-/**
- * Hello world!
- */
 public class App {
     public static void main(String[] args) throws Exception {
         var webapp = new WebAppContext();

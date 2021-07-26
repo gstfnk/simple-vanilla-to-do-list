@@ -32,6 +32,7 @@
 
         <!-- Names the annotated entity class -->
         <mapping class="io.github.gstfnk.lang.Lang"/>
+        <mapping class="io.github.gstfnk.todo.Todo"/>
 
     </session-factory>
 
