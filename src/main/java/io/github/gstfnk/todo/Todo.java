@@ -29,7 +29,7 @@ class Todo {
         return text;
     }
 
-    public void setText(String welcomeMsg) {
+    public void setText(String text) {
         this.text = text;
     }
 
