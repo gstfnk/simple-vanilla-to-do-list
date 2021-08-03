@@ -29,10 +29,6 @@ class Todo {
         return text;
     }
 
-    public void setText(String text) {
-        this.text = text;
-    }
-
     public boolean getDone() {
         return done;
     }
